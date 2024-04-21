@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C6FB1"
+    android:orientation="horizontal"
+    tools:context=".presentation.MainActivity">
+
+    <TextView
+        android:id="@+id/arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/img_2"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/tvToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Today"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvGradus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40sp"
+        android:layout_marginTop="60dp"
+        android:text="33"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvGradus"
+        android:layout_marginLeft="40sp"
+        android:layout_marginTop="-10dp"
+        android:text="Haze"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_weather"
+        android:layout_marginLeft="40sp"
+        android:text="London"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="500dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/circle_celect"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Weather"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
